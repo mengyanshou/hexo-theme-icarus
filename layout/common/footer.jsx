@@ -37,26 +37,27 @@ class Footer extends Component {
                             <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
                             <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
-                            {showVisitorCounter ? <br /> : null}
-                            {showVisitorCounter ? <span id="busuanzi_container_site_uv"
-                                dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
-                        </p>
-                    </div>
-                    <div class="level-end">
-                        {Object.keys(links).length ? <div class="field has-addons">
-                            {Object.keys(links).map(name => {
-                                const link = links[name];
-                                return <p class="control">
-                                    <a class={`button is-transparent ${link.icon ? 'is-large' : ''}`} target="_blank" rel="noopener" title={name} href={link.url}>
-                                        {link.icon ? <i class={link.icon}></i> : name}
-                                    </a>
-                                </p>;
-                            })}
-                        </div> : null}
-                    </div>
+                            <br/><a href="http://beian.miit.gov.cn/" target="_blank">蜀ICP备19028537号-1</a>
+                        {showVisitorCounter ? <br /> : null}
+                        {showVisitorCounter ? <span id="busuanzi_container_site_uv"
+                            dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
+                    </p>
+                </div>
+                <div class="level-end">
+                    {Object.keys(links).length ? <div class="field has-addons">
+                        {Object.keys(links).map(name => {
+                            const link = links[name];
+                            return <p class="control">
+                                <a class={`button is-transparent ${link.icon ? 'is-large' : ''}`} target="_blank" rel="noopener" title={name} href={link.url}>
+                                    {link.icon ? <i class={link.icon}></i> : name}
+                                </a>
+                            </p>;
+                        })}
+                    </div> : null}
                 </div>
             </div>
-        </footer>;
+        </div>
+        </footer >;
     }
 }
 
